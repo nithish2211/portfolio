@@ -35,7 +35,7 @@ const Contact = () => {
         <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
-        <a href="mailto:youremail@example.com">
+        <a href="mailto:nithish221103@gmail.com">
           <FaEnvelope />
         </a>
       </div>
