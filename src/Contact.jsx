@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
@@ -6,6 +6,7 @@ import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const formRef = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,15 +15,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.send(
-      'service_t9ojoya',       // Replace with your service ID
-      'template_7gul0xe',      // Replace with your template ID
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-      },
-      'AT0Og2yOlUZpjdK0W'           // Replace with your public key (user ID)
+    emailjs.sendForm(
+      'service_t9ojoya',
+      'template_7gul0xe',
+      formRef.current,
+      'AT0Og2yOlUZpjdK0W'
     )
     .then(() => {
       alert("Message sent successfully!");
@@ -52,9 +49,9 @@ const Contact = () => {
         <a href="mailto:nithish221103@gmail.com"><FaEnvelope /></a>
       </div>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
-        <input type="email" name="email" placeholder="Your Email" required value={formData.email} onChange={handleChange} />
+      <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
+        <input type="text" name="from_name" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
+        <input type="email" name="from_email" placeholder="Your Email" required value={formData.email} onChange={handleChange} />
         <textarea name="message" placeholder="Your Message" rows="5" required value={formData.message} onChange={handleChange}></textarea>
         <button type="submit">Send Message</button>
       </form>
