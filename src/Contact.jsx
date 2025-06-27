@@ -5,8 +5,13 @@ import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const formRef = useRef();
+
+  const [formData, setFormData] = useState({
+    from_name: "",
+    from_email: "",
+    message: ""
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,17 +21,17 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_t9ojoya',
-      'template_7gul0xe',
+      'service_t9ojoya',         // Your EmailJS service ID
+      'template_7gul0xe',        // Your EmailJS template ID
       formRef.current,
-      'AT0Og2yOlUZpjdK0W'
+      'AT0Og2yOlUZpjdK0W'        // Your public key
     )
     .then(() => {
       alert("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ from_name: "", from_email: "", message: "" });
     })
     .catch((error) => {
-      console.error("Failed to send message:", error.text);
+      console.error("Failed to send message:", error);
       alert("Failed to send message. Please try again later.");
     });
   };
@@ -50,9 +55,30 @@ const Contact = () => {
       </div>
 
       <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
-        <input type="text" name="from_name" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
-        <input type="email" name="from_email" placeholder="Your Email" required value={formData.email} onChange={handleChange} />
-        <textarea name="message" placeholder="Your Message" rows="5" required value={formData.message} onChange={handleChange}></textarea>
+        <input
+          type="text"
+          name="from_name"
+          placeholder="Your Name"
+          required
+          value={formData.from_name}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          name="from_email"
+          placeholder="Your Email"
+          required
+          value={formData.from_email}
+          onChange={handleChange}
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+          value={formData.message}
+          onChange={handleChange}
+        ></textarea>
         <button type="submit">Send Message</button>
       </form>
     </motion.section>
