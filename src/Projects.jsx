@@ -1,14 +1,15 @@
 import React from "react";
 import "./Projects.css";
+import Todonix from './img/p11.png'
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio to showcase my skills and projects.",
+    title: "Todonix - A Task Managemer",
+    description: "A task management app to organize your daily tasks efficiently.",
     tech: ["React", "Framer Motion", "Tailwind"],
-    image: "https://via.placeholder.com/400x200.png?text=Portfolio",
-    live: "https://your-portfolio.vercel.app",
-    github: "https://github.com/yourusername/portfolio",
+    image: Todonix,
+    live: "https://todonix.netlify.app",
+    github: "https://github.com/nithish2211/portfolio",
   },
   {
     title: "Food Order App",
