@@ -6,7 +6,7 @@
 
 .projects-title span {
   background: linear-gradient(135deg, #3f2332, #ff0099, #41122a);
-  -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
