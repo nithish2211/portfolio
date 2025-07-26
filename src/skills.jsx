@@ -39,7 +39,7 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("Frontend");
 
   return (
-    <section className="skills-section">
+    <section  id="skills" className="skills-section">
       <h2 className="skills-title">My <span>Skills</span></h2>
       <div className="skills-tabs">
         {Object.keys(skillCategories).map((tab) => (
