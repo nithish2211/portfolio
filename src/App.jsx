@@ -1,9 +1,9 @@
 import React, { useState ,useEffect} from "react";
-import Landing from "./Landing";
-import About from "./About";
-import Skills from "./Skills"
-import Projects from "./Projects";
-import Contact from "./Contact";
+import Landing from "./Landing.jsx";
+import About from "./About.jsx";
+import Skills from "./Skills.jsx"
+import Projects from "./Projects.jsx";
+import Contact from "./Contact.jsx";
 import "./App.css";
 import resume from './img/resume.pdf';
 
