@@ -2,6 +2,7 @@ import React from "react";
 import "./Projects.css";
 import nusole from './img/image.png';
 import Todonix from './img/p11.png'
+import portfolio from './img/portfolio.png';
 
 const projects = [
   {
@@ -21,12 +22,12 @@ const projects = [
     github: "https://github.com/nithish2211/Shoe-ecom",
   },
   {
-    title: "Weather Forecast App",
-    description: "Real-time weather updates using OpenWeatherMap API.",
-    tech: ["HTML", "CSS", "JavaScript", "API"],
-    image: "https://via.placeholder.com/400x200.png?text=Weather+App",
-    live: "https://weatherapp.vercel.app",
-    github: "https://github.com/yourusername/weatherapp",
+    title: "Nithish verse - A Personal Portfolio",
+    description: "A personal portfolio to showcase my projects and skills.",
+    tech: ["JavaScript","React", "API"],
+    image: portfolio,
+    live: "https://nithishverse.netlify.app",
+    github: "https://github.com/nithish2211/portfolio",
   }
 ];
 

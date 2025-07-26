@@ -1,16 +1,29 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import Landing from "./Landing";
 import About from "./About";
 import Skills from "./Skills"
 import Projects from "./Projects";
 import Contact from "./Contact";
 import "./App.css";
+import resume from './img/resume.pdf';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
 
   return (
+    
     <div className="portfolio">
       {/* Header */}
       <header>
@@ -33,6 +46,45 @@ function App() {
       </header>
 
       {/* Sections */}
+    <a
+  href={resume}
+  download
+  title="Download Resume"
+  style={{
+    position: "fixed",
+    bottom: "100px",
+    right: isMobile ? "20px" : "40px",  // Dynamically update
+    width: "70px",
+    height: "50px",
+    background: "rgba(255, 255, 255, 0.1)",
+    backdropFilter: "blur(5px)",
+    WebkitBackdropFilter: "blur(10px)",
+    border: "1px solid rgba(255, 255, 255, 0.2)",
+    borderRadius: "20%",
+    color: "#fff",
+    fontWeight: "600",
+    fontSize: "0.75rem",
+    textAlign: "center",
+    lineHeight: "50px",
+    textDecoration: "none",
+    zIndex: 999,
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    boxShadow: "0 0 8px rgba(255, 255, 255, 0.15)",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 0 12px rgba(255,255,255,0.4)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 0 8px rgba(255,255,255,0.15)";
+  }}
+>
+  Resume
+</a>
+
+
+
       <Landing />
       <About />
       <Skills />

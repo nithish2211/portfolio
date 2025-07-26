@@ -21,10 +21,10 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_t9ojoya',         // Your EmailJS service ID
-      'template_7gul0xe',        // Your EmailJS template ID
+      'service_t9ojoya',         // EmailJS service ID
+      'template_7gul0xe',        // EmailJS template ID
       formRef.current,
-      'AT0Og2yOlUZpjdK0W'        // Your public key
+      'AT0Og2yOlUZpjdK0W'        // public key
     )
     .then(() => {
       alert("Message sent successfully!");

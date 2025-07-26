@@ -20,6 +20,7 @@ const skillCategories = {
     { name: "Bootstrap", icon: <FaBootstrap />, level: "90%" },
     { name: "Tailwind CSS", icon: <SiTailwindcss />, level: "90%" },
     { name: "DaisyUI", icon: <SiDaisyui />, level: "85%" },
+    { name: "Framer Motion", icon: <SiTailwindcss />, level: "80%" }, // Assuming Framer Motion is similar to Tailwind for this example
   ],
   "UI/UX": [
     { name: "Figma", icon: <SiFigma />, level: "90%" },
@@ -39,7 +40,7 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("Frontend");
 
   return (
-    <section  id="skills" className="skills-section">
+    <section id="skills" className="skills-section">
       <h2 className="skills-title">My <span>Skills</span></h2>
       <div className="skills-tabs">
         {Object.keys(skillCategories).map((tab) => (
