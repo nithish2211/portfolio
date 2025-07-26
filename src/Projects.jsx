@@ -1,5 +1,6 @@
 import React from "react";
 import "./Projects.css";
+import nusole from './img/image.png';
 import Todonix from './img/p11.png'
 
 const projects = [
@@ -12,12 +13,12 @@ const projects = [
     github: "https://github.com/nithish2211/portfolio",
   },
   {
-    title: "Food Order App",
-    description: "A full-stack MERN food ordering app with admin dashboard.",
-    tech: ["React", "MongoDB", "Express", "Node.js"],
-    image: "https://via.placeholder.com/400x200.png?text=Food+App",
-    live: "https://foodapp.vercel.app",
-    github: "https://github.com/yourusername/foodapp",
+    title: "NuSole- A Shoe Store",
+    description: "A branded shoe store .",
+    tech: ["React", "TailwindCss", "Framer Motion"],
+    image: nusole,
+    live: "https://nusole.netlify.app",
+    github: "https://github.com/nithish2211/shoeApp",
   },
   {
     title: "Weather Forecast App",
