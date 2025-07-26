@@ -18,7 +18,7 @@ const projects = [
     tech: ["React", "TailwindCss", "Framer Motion"],
     image: nusole,
     live: "https://nusole.netlify.app",
-    github: "https://github.com/nithish2211/shoeApp",
+    github: "https://github.com/nithish2211/Shoe-ecom",
   },
   {
     title: "Weather Forecast App",

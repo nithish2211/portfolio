@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Landing from "./Landing";
 import About from "./About";
-import Skills from "./skills"
+import Skills from "./Skills"
 import Projects from "./Projects";
 import Contact from "./Contact";
 import "./App.css";
