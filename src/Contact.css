@@ -80,5 +80,10 @@
   transform: scale(1.2);
 }
 #contact{
-  scroll-margin-top: 160px; /* adjust based on your fixed header height */
+  scroll-margin-top: 120px; /* adjust based on your fixed header height */
+}
+@media (max-width: 768px) {
+  #contact {
+    scroll-margin-top: 80px;
+  }
 }
