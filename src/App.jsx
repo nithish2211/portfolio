@@ -5,8 +5,9 @@ import Skills from "./Skills.jsx"
 import Projects from "./Projects.jsx";
 import Contact from "./Contact.jsx";
 import "./App.css";
-import resume from './img/resume.pdf';
+import resume from './img/resume2.pdf';
 
+import { FiDownload } from "react-icons/fi";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -46,14 +47,14 @@ useEffect(() => {
       </header>
 
       {/* Sections */}
-    <a
+<a
   href={resume}
   download
   title="Download Resume"
   style={{
     position: "fixed",
     bottom: "100px",
-    right: isMobile ? "20px" : "40px",  // Dynamically update
+    right: isMobile ? "20px" : "40px",
     width: "70px",
     height: "50px",
     background: "rgba(255, 255, 255, 0.1)",
@@ -65,11 +66,16 @@ useEffect(() => {
     fontWeight: "600",
     fontSize: "0.75rem",
     textAlign: "center",
-    lineHeight: "50px",
     textDecoration: "none",
     zIndex: 999,
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
     boxShadow: "0 0 8px rgba(255, 255, 255, 0.15)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "0px",
+    gap: "4px",
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.transform = "scale(1.05)";
@@ -81,7 +87,9 @@ useEffect(() => {
   }}
 >
   Resume
+  <FiDownload style={{ fontSize: "10px" }} />
 </a>
+
 
 
 
