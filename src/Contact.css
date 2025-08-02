@@ -81,6 +81,6 @@
 }
 #contact {
   scroll-margin-top: 100px;  /* adjust based on your header */
-  padding-bottom: 300px; 
+  padding-bottom: 200px; 
   min-height: 100vh;    /* ensures enough space below the form */
 }

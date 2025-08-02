@@ -12,7 +12,7 @@ import "./Skills.css";
 const skillCategories = {
   Frontend: [
     { name: "HTML", icon: <FaHtml5 />, level: "90%" },
-    { name: "CSS", icon: <FaCss3Alt />, level: "85%" },
+    { name: "CSS", icon: <FaCss3Alt />, level: "90%" },
     { name: "JavaScript", icon: <FaJs />, level: "90%" },
     { name: "React", icon: <FaReact />, level: "80%" },
   ],
