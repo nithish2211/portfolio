@@ -240,7 +240,6 @@ header {
   background-color: #aaa;
 }
 
-/* Bottom Navigation */
 .bottom-nav {
   display: flex;
   justify-content: space-around;
@@ -266,14 +265,13 @@ header {
   color: #fff;
 }
 
-/* Hide Bottom Nav on Desktop */
+
 @media (min-width: 769px) {
   .bottom-nav {
     display: none;
   }
 }
 
-/* Resume Button */
 .resume-button {
   position: fixed;
   bottom: 100px;
@@ -300,7 +298,6 @@ header {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-/* Gradient Animation */
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
@@ -313,7 +310,6 @@ header {
   }
 }
 
-/* Scroll Animation Defaults */
 .scroll-section {
   opacity: 0;
   transform: translateY(50px);
