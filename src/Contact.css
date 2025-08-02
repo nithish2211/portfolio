@@ -79,3 +79,6 @@
   color: #ff0099;
   transform: scale(1.2);
 }
+#contact{
+  scroll-margin-top: 160px; /* adjust based on your fixed header height */
+}
